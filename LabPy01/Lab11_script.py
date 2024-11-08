@@ -28,3 +28,20 @@ print("The complement of", dna_seq2, "is", dna2_compl)
 #Restriction Fragment Lengths
 #find position of GAATTC
 dna_seq.find('GAATTC')
+
+
+###SPLICING INTRONS###
+dna_seq3 = "ATCGATCGATCGATCGACTGACTAGTCATAGCTATGCATGTAGCTACTCGATCGATCGATCGATCGATCGATCGATCGATCGATCATGCTATCATCGATCGATATCGATGCATCGACTACTAT"
+
+#First exon given start to 63rd character
+exon1 = dna_seq3[0:63]
+#Second exon given 91st character to end of sequence
+exon2 = dna_seq3[90:]
+
+print("Exons joined\n" + exon1 + exon2)
+coding_length = len(exon1+exon2)
+total_length = len(dna_seq3)
+print("Coding % (rounded)\n" +
+        str(int((coding_length / total_length) * 100)))
+
+#

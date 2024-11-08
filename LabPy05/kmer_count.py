@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 #Import modules
 import sys
+import os
 
 def kmer_count(dna, kmersize):
     startpoint=0
