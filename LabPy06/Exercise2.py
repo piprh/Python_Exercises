@@ -24,10 +24,10 @@ def translate(seq):
         codon = seq[start : start + 3]
         codon_list.append(codon)
         start += 3
-    print(codon_list)
+    print("Codons: ", codon_list)
     codon_dict={}
     for codon in codon_list:
-        codon_dict[codon] = gencode.get(codon)
-    return codon_dict
+        codon_dict[codon] = gencode.get(codon, "X") #dict.get(search value, return if error)
+    return list(codon_dict.values())
 
-print(translate('ATGTTCGGT').values())
+print(translate('ATGTTCGGTGAH'))
